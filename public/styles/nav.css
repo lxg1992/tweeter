@@ -1,0 +1,37 @@
+nav {
+  position:fixed;
+  top: 0;
+  height:120px;
+  width:100%;
+  z-index: 1000;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left:10vw;
+  padding-right:10vw;
+  padding-top:3.5rem;
+
+}
+
+nav span.left {
+  font-family: 'Bungee', cursive;
+  font-weight:700;
+  font-size:1.5em;
+}
+
+nav span.right{
+  font-family: 'Source Sans Pro', sans-serif;
+  transition: all linear 0.3s;
+
+}
+
+nav span.right:hover{
+  color: #46A8A1;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
