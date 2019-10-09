@@ -1,0 +1,46 @@
+article.tweet {
+  border: 5px solid #545149;
+  width: 85%;
+  margin: 50px auto;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+article.tweet header img {
+  margin:10px;
+}
+
+article.tweet header span{
+  padding: 5px;
+}
+
+article.tweet p {
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 5vw;
+  border-bottom: 5px solid #545149;
+  font-weight: bold;
+  font-size: 0.8em;
+  overflow:auto;
+}
+
+article.tweet .handle{
+  color:lightblue;
+}
+
+article.tweet footer {
+  margin: 10px 10px;
+}
+
+article.tweet footer span{
+  font-size: 0.75em;
+}
+
+article.tweet:hover{
+  box-shadow:10px 10px lightgrey;
+  
+} 
+
+
+
+

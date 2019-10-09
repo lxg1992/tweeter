@@ -28,6 +28,17 @@ nav span.right:hover{
   color: #46A8A1;
 }
 
+nav span.right i{
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.25s linear opacity;
+}
+
+nav span.right:hover i{
+  visibility: visible;
+  opacity: 1;  
+}
+
 nav a {
   text-decoration: none;
   color: inherit;

@@ -1,4 +1,4 @@
-header {
+header.profile {
 
   display: flex;
   height: 400px;
@@ -11,7 +11,7 @@ header {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-header img {
+header.profile img {
   position: relative;
   top: 10px;
 }
