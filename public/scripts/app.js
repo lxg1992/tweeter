@@ -1,6 +1,7 @@
 
 
 const renderTweets = function(tweets) {
+  //Empty the twitterFeed and for each item from JSON response array append the item to the twitterFeed
   const $twitterFeed = $('.tweetFeed');
   $twitterFeed.empty();
   for (let tweet of tweets) {
@@ -10,6 +11,7 @@ const renderTweets = function(tweets) {
 };
 
 const escape =  function(str) {
+  //Sterilize the input
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -45,6 +47,7 @@ const createTweetElement = function({user, content, created_at}) {
 };
 
 const sendTweetHandler = function() {
+  //Attach a handler to the 'TWEET' button which sends an AJAX POST request
   const $form = $('.tweetForm');
   const $error = $('.error');
   $form.on('submit',async function(event) {
@@ -84,6 +87,7 @@ const sendTweetHandler = function() {
 };
 
 const loadTweets = async function() {
+  //AJAX GET and then send the 'data' response to renderTweets function as an argument
   await $.get("/tweets", (data) => {
     renderTweets(data);
   });
@@ -96,10 +100,7 @@ const newTweetAnchorHandler = function() {
   $('a[href^="#"]').click(function(e) {
     e.preventDefault();
     if(!isShown){
-      //If box IS NOT currently shown
-      //$composeBox.css('display','block');
-      $composeBox.removeClass('jqINVISIBLE').addClass('jqVISIBLE');
-      
+      $composeBox.removeClass('jqINVISIBLE').addClass('jqVISIBLE');      
       $('html,body').animate(
         { 
           scrollTop: ($(this.hash).offset().top) - 200
@@ -126,10 +127,10 @@ const newTweetAnchorHandler = function() {
 const enterKeyHandler = function() {
   let $nTT = $('#newTweetText');
   $nTT.keypress(function (e) {
-    if (e.which == 13) {
+    if (e.which === 13) {
       $('.tweetForm').submit();
       $nTT.val('');
-      return false;    //<---- Add this line
+      return false;
     }
   });
 }
