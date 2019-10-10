@@ -16,3 +16,9 @@ Tweeter is a simple, single-page Twitter clone.
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Tweeter hero banner"](docs/title.png)
+!["Tweeter feed"](docs/feed.png)
+
