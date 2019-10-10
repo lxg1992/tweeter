@@ -4,7 +4,28 @@ article.tweet {
   margin: 50px auto;
   padding: 5px;
   border-radius: 3px;
+  opacity:0.9;
 }
+
+article.tweet:nth-child(1){
+  background-color:rgba(70, 124, 168, 0.7)
+}
+
+article.tweet:nth-child(2){
+  background-color:rgba(64, 86, 161,0.4)
+}
+article.tweet:nth-child(3){
+  background-color:rgba(64, 86, 161,0.3)
+}
+
+article.tweet:nth-child(4){
+  background-color:rgba(64, 86, 161,0.2)
+}
+
+article.tweet:nth-child(5){
+  background-color:rgba(64, 86, 161,0.1)
+}
+
 
 article.tweet header img {
   margin:10px;
@@ -25,7 +46,7 @@ article.tweet p {
 }
 
 article.tweet .handle{
-  color:lightblue;
+  color:rgb(53, 190, 138);
 }
 
 article.tweet footer {
@@ -38,8 +59,11 @@ article.tweet footer span{
 
 article.tweet:hover{
   box-shadow:10px 10px lightgrey;
+  opacity:1;
   
 } 
+
+
 
 
 

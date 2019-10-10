@@ -10,6 +10,8 @@ html {
   box-sizing: inherit;
 }
 
+
+
 /*
  * Global layout stuff
  */
@@ -70,6 +72,11 @@ body {
   align-items: center;
 }
 
+.break{
+  overflow-wrap: break-word;
+
+}
+
 .push {
   margin-left:auto;
 }
@@ -80,6 +87,19 @@ body {
 
 .hoverITEM {
   visibility: hidden;
+}
+
+.jqVISIBLE{
+  visibility: visible;
+  opacity: 1;
+  transition: 1s linear opacity;
+  /* display:block; */
+}
+
+.jqINVISIBLE{
+  visibility: hidden;
+  opacity: 0;
+  height: 50px;
 }
 
 .hoverSET:hover .hoverITEM{
@@ -94,3 +114,4 @@ body {
    background-color: #f4f1ec;
 
  }
+

@@ -8,12 +8,39 @@ header.profile {
   flex-direction: column;
   background-color: #25a8a1;
   background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  background-attachment: fixed;
+}
+
+header .innerProfile{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
 }
 
 header.profile img {
   position: relative;
   top: 10px;
+}
+
+@media only screen and (min-width: 1024px){
+  header.profile {    
+    width: 50%;
+    float:left;
+    background: none;
+  }
+
+  header .innerProfile {
+    background-color: #25a8a1;
+    background-image: url("https://www.transparenttextures.com/patterns/foggy-birds.png");
+    background-attachment: scroll;
+    padding: 20px 20%;
+    margin: 100px auto;
+  }  
+
+  main.container {    
+    float:right;
+    width: 50%;    
+  }
 }
 
 
