@@ -81,7 +81,8 @@ const sendTweetHandler = function() {
       await $.post('/tweets', $(obj).serialize()).fail((err)=>{
         console.log(err);
       }).done(loadTweets()).always(loadTweets());
-    
+      
+      $('#newTweetText').val('');
     }
   });
 };
@@ -94,12 +95,15 @@ const loadTweets = async function() {
   
 };
 
+
+//Open or close compose box access and navigate to the box
 const newTweetAnchorHandler = function() {
   let isShown = false;
   let $composeBox = $('.new-tweet');
   $('a[href^="#"]').click(function(e) {
     e.preventDefault();
     if(!isShown){
+      //If box is not shown
       $composeBox.removeClass('jqINVISIBLE').addClass('jqVISIBLE');      
       $('html,body').animate(
         { 
@@ -114,7 +118,7 @@ const newTweetAnchorHandler = function() {
       //If box IS shown
      
       $composeBox.removeClass('jqVISIBLE').addClass('jqINVISIBLE');
-      //$composeBox.css('display','none')
+      
       
 
       isShown = false;
@@ -124,6 +128,7 @@ const newTweetAnchorHandler = function() {
   });
 };
 
+//Enter SUBMITS text and resets form
 const enterKeyHandler = function() {
   let $nTT = $('#newTweetText');
   $nTT.keypress(function (e) {
@@ -135,13 +140,14 @@ const enterKeyHandler = function() {
   });
 }
 
+//Load handlers
 $(document).ready(function() {
   newTweetAnchorHandler();
   loadTweets();
   sendTweetHandler();  
   enterKeyHandler();
-
-  $('.new-tweet').removeClass('jqVISIBLE').addClass('jqINVISIBLE');
+  //Set initial state of new-tweet form as INVISIBLE
+  $('.new-tweet').addClass('jqINVISIBLE');
 });
 
 
