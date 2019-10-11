@@ -19,6 +19,6 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Screenshots
 
-!["Tweeter hero banner"](docs/title.png)
-!["Tweeter feed"](docs/feed.png)
+!["Tweeter hero banner"](https://github.com/lxg1992/tweeter/blob/master/docs/title.png?raw=true)
+!["Tweeter feed"](https://github.com/lxg1992/tweeter/blob/master/docs/feed.png?raw=true)
 
